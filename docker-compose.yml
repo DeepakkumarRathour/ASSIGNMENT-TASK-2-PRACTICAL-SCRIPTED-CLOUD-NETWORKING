@@ -1,0 +1,13 @@
+version: "3"
+services:
+  r1:
+    image: frrouting/frr:latest
+    privileged: true
+    command: /sbin/init
+  r2:
+    image: frrouting/frr:latest
+    privileged: true
+    command: /sbin/init
+  client:
+    image: alpine:latest
+    command: ["sh","-c","sleep 99999"]
